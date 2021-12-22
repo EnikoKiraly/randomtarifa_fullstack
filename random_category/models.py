@@ -16,7 +16,6 @@ class Random_Detail(models.Model):
     image = models.ImageField(upload_to='assets/img/detail/')
     website = models.CharField(max_length=100)
     location = models.CharField(max_length=1000)
-    sharing_number = models.IntegerField()
     change_number = models.IntegerField()
 
     def __str__(self):

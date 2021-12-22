@@ -6,12 +6,12 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal{{total_random_detail.category}}" >
                 <img class="img-fluid img-pump masthead-avatar mb-5" src="{% static 'assets/img/totalrandom.png' %}" alt="..." />
                 </div>
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Total Random </h1>
-                
+
                
             </div>
         </header>
@@ -96,24 +96,20 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->                                  
                                         <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{detail.name}}</h2>
-                                        <!-- Icon Divider-->
-                                        <div class="divider-custom">
-                                            <div class="divider-custom-line"></div>
-                                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                            <div class="divider-custom-line"></div>
-                                        </div>
+                                        <br><br>
+                                        <h3>{{detail.category}}</h3>
+                                        <br><br> 
                                         <!-- Portfolio Modal - Image-->
-                                        <img class="img-fluid rounded mb-5" src="{{detail.image.url}}" alt="..." />
+                                        <a target="_blank" href="{{detail.website}}">
+                                        <img class="img-fluid img-pump rounded mb-5" src="{{detail.image.url}}" alt="..." />
+                                        </a>
                                         <!-- Portfolio Modal - Text-->
-                                        <p class="mb-4">{{detail.description}}</p>
-                                        <a href="{{detail.website}}"><i class="fas fa-map-marked-alt fa-3x modal-icon"></i></a>
-                                        <a href="{{detail.description}}"><i class="fab fa-safari fa-3x modal-icon"></i></a>
-                                        <a href="{{detail.location}}"><i class="fas fa-share-alt fa-3x modal-icon"></i></a>
-                                        <a href=""><i class="fas fa-random fa-3x modal-icon"></i></a>
-                                        <p>Sharing number background {{detail.sharing_number}}</p>
-                                        <p>Changing number {{detail.change_number}} </p>
+                                        <h4 class="mb-4">{{detail.description}}</h4>
+                                        <!-- TODO CKEDITO -->
+                                        <a target="_blank" href="{{detail.location}}"><i class="fas fa-map-marked-alt fa-3x modal-icon"></i></a>
+                                        <a href="" ><i class="fas fa-random fa-3x modal-icon"></i></a>
+                                        <p>Changing number background {{detail.change_number}} </p>
                                 </div>
                             </div>
                         </div>
