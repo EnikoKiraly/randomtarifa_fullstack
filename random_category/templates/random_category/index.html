@@ -97,18 +97,40 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                         <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{detail.name}}</h2>
-                                        <br><br>
+                                        <br><br><br>
                                         <h3>{{detail.category}}</h3>
-                                        <br><br> 
+                                        <br><br><br> 
                                         <!-- Portfolio Modal - Image-->
-                                        <a target="_blank" href="{{detail.website}}">
+                                        
                                         <img class="img-fluid img-pump rounded mb-5" src="{{detail.image.url}}" alt="..." />
-                                        </a>
-                                        <!-- Portfolio Modal - Text-->
+                                        
+                                        <br><br><br>
                                         <h4 class="mb-4">{{detail.description}}</h4>
                                         <!-- TODO CKEDITO -->
-                                        <a target="_blank" href="{{detail.location}}"><i class="fas fa-map-marked-alt fa-3x modal-icon"></i></a>
-                                        <a href="" ><i class="fas fa-random fa-3x modal-icon"></i></a>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-6 text-center">
+                                                    <a target="_blank" href="{{detail.location}}">
+                                                        <span  class="fas fa-map-marked-alt fa-3x modal-icon"> </span>
+                                                        <h4>Location</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6  text-center">
+                                                    <a target="_blank" href="{{detail.website}}">
+                                                        <span  class="fab fa-safari fa-3x modal-icon"> </span>
+                                                        <h4>Website</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4 col-sm-12 text-center">
+                                                    <a href="">
+                                                        <span  class="fas fa-random fa-3x modal-icon"> </span>
+                                                        <h4>Shuffle</h4>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
                                         <p>Changing number background {{detail.change_number}} </p>
                                 </div>
                             </div>
