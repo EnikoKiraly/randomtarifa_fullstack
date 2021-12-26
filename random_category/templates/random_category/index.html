@@ -15,27 +15,9 @@
        
     </div>
 </header>
-<!-- Portfolio Section-->
-<section class="page-section portfolio" id="portfolio">
-    <div class="container">
-        <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Random Category</h2>
-        <br><br>
-        <!-- Portfolio Grid Items-->
-        <div class="row justify-content-center">
-            <!-- Portfolio Item 1-->
-            {% for category in categorys %}
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto align-items-center" data-bs-toggle="modal" data-bs-target="#portfolioModal{{category.name}}">
-                    <img class="img-fluid img-pump" src="{{category.image.url}}" alt="..." />
-                    <h1 class="text-center">{{category.name}}</h1>
-                    <p>Click number background {{category.clicks_number}}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+<!-- Category Section-->
+{% include 'random_category/category.html' %}
+
 <!-- About Section-->
 <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
@@ -44,42 +26,10 @@
         <br><br>
         <!-- About Section Content-->
         <div class="row">
-            <div class="col-lg-10 ms-auto"><p class="lead">Random Tarifa is project made to make you more happy and spontanic in your live. If you want to feall more spotanic in your live use our website and help us develop it by your personal feedback and donation!</p></div>
-            <h1>Here gona aperee random quote from Rich ,,,</h1>
-        </div>
-    </div>
-</section>
-<!-- Contact Section-->
-  <section class="page-section" id="contact">
-    <div class="container">
-        <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Request Place</h2>
-        <br><br>
-        <p class="text-center">Help us make random Tarifa Bigger and request your favorite place!</p>
+            <div class="col-lg-10 ms-auto"><h1>Random Taifa is project made to make you more happy and spontanic in your live. If you want to feall more spotanic in your live use our website and help us develop it by your personal feedback and donation!</h1></div>
 
-        <!-- Icon Divider-->
-        <br><br>
-        <!-- Contact Section Form-->
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7">
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Name input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label for="name">Place name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                    </div>
-                    <!-- zrobić sprawdzenie czy isnieje już taka lokalizacaj -->
-                    <!-- Message input-->
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label for="message">Website, instagram or location</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                    </div>
-                    <button type="button" class="btn btn-secondary btn-lg">Send</button>
-
-
-                </form>
+            <div class="col-lg-10 ms-auto">
+                <h3>{{quote.quote | safe}}</h3>
             </div>
         </div>
     </div>

@@ -11413,23 +11413,6 @@ html {
     font-size: 1.5em;
   }
 }
-.form-floating input.form-control,
-.form-floating textarea.form-control {
-  font-size: 1.5rem;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-radius: 0;
-  border-width: 1px;
-}
-.form-floating input.form-control:focus,
-.form-floating textarea.form-control:focus {
-  box-shadow: none;
-}
-.form-floating label {
-  font-size: 1.5rem;
-  color: #6c757d;
-}
 
 .masthead {
   padding-top: calc(6rem + 74px);
@@ -11518,3 +11501,39 @@ html {
 .modal-icon{
   margin: 3%;
 }
+
+input[type=text], input[type=email], textarea {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 2px;
+ display: inline-block;
+}
+
+.custom-progress {
+  height: 7px;
+  border-radius: 0;
+}
+.custom-progress .progress-bar {
+  background: #000;
+}
+
+
+
+.form-floating input.form-control,
+.form-floating textarea.form-control {
+  font-size: 1.5rem;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  border-width: 1px;
+}
+.form-floating input.form-control:focus,
+.form-floating textarea.form-control:focus {
+  box-shadow: none;
+}
+.form-floating label {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+

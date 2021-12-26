@@ -1,0 +1,22 @@
+<section class="page-section portfolio" id="category">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Random Category</h2>
+        <br><br>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+            <!-- Portfolio Item 1-->
+            {% for category in categorys %}
+            <div class="col-md-6 col-lg-4 mb-5">
+                
+
+                    <div class="portfolio-item mx-auto align-items-center" data-bs-toggle="modal" data-bs-target="#portfolioModal{{category.name}}">
+                        <img class="img-fluid img-pump" src="{{category.image.url}}" alt="..." />
+                        <h1 class="text-center">{{category.name}}</h1>
+                    </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

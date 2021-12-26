@@ -18,7 +18,9 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
+    path('',include('contact.urls')),
     path('', include('random_category.urls')),
     path('admin/', admin.site.urls),
 ]

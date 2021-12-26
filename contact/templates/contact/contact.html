@@ -1,0 +1,37 @@
+{% extends 'random_category/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+  <main id="main">
+    <br><br><br><br><br><br><br><br><br>
+    <section class="section">
+       
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 mr-auto">
+          <h2>Contact Us</h2>
+          <p class="mb-5">Hey there! Feel free to contact us with any questions, ideas or inquiries! Have a good day :)</p>
+          
+        </div>
+
+        <div class="col-md-6">
+          <form action="" method="post">
+                {% csrf_token %}
+                {{ form_contact }}
+              <input type="submit" value="Submit" class="btn btn-dark rounded-0 py-2 px-4">
+          </form>
+        </div>
+      </div>
+  </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+
+    
+
+  </main><!-- End #main -->
+
+
+{% endblock %}
