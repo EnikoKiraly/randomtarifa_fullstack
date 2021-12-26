@@ -3,7 +3,6 @@ from .models import Random_Category, Random_Detail, Quote
 import random
 
 
-
 def index(request):
     categorys = Random_Category.objects.all()
     details = Random_Detail.objects.order_by('category','?').distinct('category') #shuffle and one of each category
@@ -19,11 +18,9 @@ def index(request):
     quote = quote_random[random_quote_number]
     
     context = {
-    'categorys':categorys, 
-    'details':details,
-    'total_random_detail':total_random_detail ,
-    'quote': quote
-    
+        'categorys':categorys,
+        'details':details,
+        'total_random_detail':total_random_detail ,
+        'quote': quote
     }
-
-    return render(request, 'random_category/index.html',context )
+    return render(request, 'random_category/index.html' ,context)
